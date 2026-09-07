@@ -22,8 +22,10 @@ Sistema web de adoção responsável para uma ONG fictícia. Visitantes consulta
 ```bash
 cd api
 npm install
+mkdir -p tmp
 cp .env.example .env
 node ace generate:key
+node ace codegen
 node ace migration:run
 node ace db:seed
 ```
@@ -45,6 +47,7 @@ Para alterar as credenciais, edite `ADMIN_EMAIL`/`ADMIN_PASSWORD` no `.env` **an
 cd web
 npm install
 cp .env.example .env
+
 ```
 
 O `.env` do frontend deve apontar para a API:
